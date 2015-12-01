@@ -1,6 +1,6 @@
 var makeHappyDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
-  this.$node.append($('<img src="src/img/danceGifs/carlton_dance.gif"></img>'));
+  this.$node.append($('<img src="src/img/danceGifs/drake_dance.gif"></img>'));
   this.$node.addClass('happyDancer');
   this.angle = 0;
 

@@ -30,3 +30,14 @@ makeDancer.prototype.setPosition = function(top, left) {
   };
   this.$node.css(styleSettings);
 };
+
+makeDancer.prototype.lineUp = function() {
+  for(var i = 0; i < dancers.length; i++){
+    var position = String(1000/dancers.length);
+    this.$node.css({'top':'250px','left':position + 'px'});
+  }
+};
+
+makeDancer.prototype.interact = function() {
+
+}
