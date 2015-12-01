@@ -1,12 +1,13 @@
-var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
+var makeHatDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
+  this.$node = $('<span class="dancer"><img src="src/img/drakehead3.png"></img></span>');
 };
 
-makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
+makeHatDancer.prototype = Object.create(makeDancer.prototype);
 
-makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
+makeHatDancer.prototype.constructor = makeHatDancer;
 
-makeBlinkyDancer.prototype.step = function() {
+makeHatDancer.prototype.step = function() {
     // call the old version of step at the beginning of any call to this new version of step
     //makeDancer.step.call(this);
     makeDancer.prototype.step.call(this);
