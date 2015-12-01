@@ -1,7 +1,9 @@
 body, html{
-  height:100%;
+  height:600px;
+  width:1000px;
 }
 body{
+  width:900px;
   margin: 0px;
   /*background-color:#444;*/
   background-image: url(src/img/Degrassi.jpg);
@@ -16,6 +18,7 @@ body, a:link, a:visited, a:active{
 }
 .topbar{
   height:32px;
+  width:1000px;
   background-color: #555;
 }
 .title{
@@ -31,7 +34,6 @@ body, a:link, a:visited, a:active{
 */
 .happyDancer{
   position: absolute;
-  transform: rotate(7deg);
 }
 
 /*.hatDancer{
