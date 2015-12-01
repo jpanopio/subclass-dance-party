@@ -26,6 +26,8 @@ body, a:link, a:visited, a:active{
 }
 .dancer{
   position: relative;
+  height: 100px;
+  width: 100px;
 
 }
 /*.blinkyDancer{
