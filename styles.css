@@ -25,14 +25,15 @@ body, a:link, a:visited, a:active{
   position: relative;
 
 }
-/*blinkyDancer{
+/*.blinkyDancer{
   position: absolute;
 }
-
+*/
 .happyDancer{
   position: absolute;
+  transform: rotate(7deg);
 }
 
-.hatDancer{
+/*.hatDancer{
   position: absolute;
-}*/
+*/}
