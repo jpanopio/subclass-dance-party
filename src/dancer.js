@@ -32,12 +32,23 @@ makeDancer.prototype.setPosition = function(top, left) {
 };
 
 makeDancer.prototype.lineUp = function() {
+  var position = 0;
   for(var i = 0; i < dancers.length; i++){
-    var position = String(1000/dancers.length);
-    this.$node.css({'top':'250px','left':position + 'px'});
+    position += (800/dancers.length);
+    dancers[i].$node.css({'top':'250px','left':String(position)+ 'px','position':'fixed'}); 
+    // Rebecca Notes: We weren't incrementing position for each item, and we weren't iterating through the dancers
+    // correctly, so I added a position variable, and made sure we were iterating through each dancer
   }
 };
 
-makeDancer.prototype.interact = function() {
+makeDancer.prototype.interact = function(topDiff,leftDiff,topP,leftP) {
+  var newTop = topP + topDiff > 0 ? topP + topDiff : 0;
+  var newLeft = leftP + leftDiff > 0 ? leftP + leftDiff : 0; 
+  /*this.$node.css({'top':String(newTop) + 'px',
+                  'left':String(newLeft) + 'px'});
+  console.log(this.$node);*/
 
-}
+  this.$node.animate({top:String(newTop) + 'px', left:String(newLeft) + 'px'});
+
+
+};
