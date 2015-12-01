@@ -22,5 +22,17 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  position:relative;
+  position: relative;
+
 }
+/*blinkyDancer{
+  position: absolute;
+}
+
+.happyDancer{
+  position: absolute;
+}
+
+.hatDancer{
+  position: absolute;
+}*/

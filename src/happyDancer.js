@@ -1,6 +1,9 @@
 var makeHappyDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
-  this.$node = $('<span class="dancer"><img src="src/img/danceGifs/carlton_dance.gif"></img></span>');
+  this.$node.append($('<img src="src/img/danceGifs/carlton_dance.gif"></img>'));
+  this.$node.addClass('happyDancer');
+
+  //this.$node = $('<span class="dancer happyDancer"><img src="src/img/danceGifs/carlton_dance.gif"></img></span>');
 };
 
 makeHappyDancer.prototype = Object.create(makeDancer.prototype);
