@@ -34,8 +34,9 @@ $(document).ready(function() {
   });
 
   $(".addLineUp").on("click", function(event){
-      for(var i = 0; i<dancers.length; i++){
+      for(var i = 0; i < dancers.length; i++){
         dancers[i].lineUp();
+
       }
   });
 
@@ -44,25 +45,27 @@ $(document).ready(function() {
 
     for(var i = 0; i < dancers.length; i++) {
       var height = dancers[i].$node.css('top');
+      var formatHeight = Number(height.substring(0, height.length - 2));
+
       var width = dancers[i].$node.css('left');
-      dancerPositions.push([dancers[i], height.substring(0,height.length-2), width.substring(0,width.length-2)], false);
+      var formatWidth = Number(width.substring(0, width.length - 2));
+
+      dancerPositions.push([dancers[i], formatHeight, formatWidth]);
     }
 
-    
     for(var i = 0; i < dancerPositions.length; i++){
-      for(var j = i+1; j < dancerPositions.length; j++){
-        if(dancerPositions[i][3] !== true && dancerPositions[j][3] !== true){
-          var topDiff = dancerPositions[i][1] - dancerPositions[j][1];
-          var leftDiff = dancerPositions[i][2] - dancerPositions[j][1];
-          if(Math.abs(topDiff) < 100 && Math.abs(leftDiff) < 100){
-            dancerPositions[i][3] = true;
-            dancerPositions[j][3] = true;
-            dancerPositions[i][0].interact(topDiff,leftDiff,dancerPositions[i][1],dancerPositions[i][2],dancerPositions[i][0]);
-            dancerPositions[j][0].interact(topDiff,leftDiff,dancerPositions[j][1],dancerPositions[j][2],dancerPositions[j][0]);
-          }
+      for(var j = i + 1; j < dancerPositions.length; j++){
+        var topDiff = dancerPositions[i][1] - dancerPositions[j][1];
+        var leftDiff = dancerPositions[i][2] - dancerPositions[j][1];
+
+        console.log("topDiff: " + topDiff);
+        console.log("leftDiff: " + leftDiff);
+
+        if(Math.abs(topDiff) < 200 || Math.abs(leftDiff) < 200) {
+          dancerPositions[i][0].interact(topDiff, leftDiff, dancerPositions[i][1], dancerPositions[i][2]);
+          dancerPositions[j][0].interact(topDiff, leftDiff, dancerPositions[j][1], dancerPositions[j][2]);
         }
       }
     }
   });
 });
-
