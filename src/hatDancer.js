@@ -1,6 +1,6 @@
 var makeHatDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
-  this.$node.append($('<img src="src/img/drakehead3.png"></img>')); 
+  this.$node.append($('<img src="src/img/danceGifs/drake_dance3.gif"></img>')); 
   this.$node.addClass('hatDancer');
   this.mouse();
   // this.$node = $('<span class="dancer hatDancer"><img src="src/img/drakehead3.png"></img></span>');

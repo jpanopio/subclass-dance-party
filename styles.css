@@ -1,13 +1,12 @@
 body, html{
-  height:600px;
-  width:1000px;
+  
 }
 body{
-  width:1000px;
   margin: 0px;
-  /*background-color:#444;*/
-  background-image: url(src/img/Degrassi.jpg);
+  background-color:#555;
   font-size: 18px;
+  background-image: url(src/img/Degrassi.jpg);
+  background-repeat: no-repeat;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -24,11 +23,14 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
-.dancer{
-  position: absolute;
-  height: 100px;
-  width: 100px;
+.highschool{
+  height:800px;
+  width:1000px;
+  margin: 0;
 
+}
+.dancer{
+  position: fixed;
 }
 /*.blinkyDancer{
   position: absolute;

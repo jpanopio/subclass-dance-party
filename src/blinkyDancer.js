@@ -1,6 +1,6 @@
 var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
-  this.$node.append($('<img src="src/img/drakehead.png"></img>'));
+  this.$node.append($('<img src="src/img/danceGifs/drake_dance2.gif"></img>'));
   this.$node.addClass('blinkyDancer');
   
 };
